@@ -196,9 +196,9 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/custom/mushop-58dd62ca.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/custom/mushop-b5c7cc9c.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-21c7ca2f.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-c5541673.js"></script>
+      <script src="javascripts/all-eb24d0f5.js"></script>
   </head>
 
   <body class="index" data-languages="[]">
@@ -211,6 +211,8 @@
     <div class="toc-wrapper">
       <img src="images/logo-734bf5ad.png" class="logo screen" alt="Logo" />
       <img src="images/logo.print-dfe0bcaa.png" class="logo print" alt="Logo.print" />
+
+
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -223,7 +225,7 @@
                     <a href="#goals" class="toc-h2 toc-link" data-title="Goals">Goals</a>
                   </li>
                   <li>
-                    <a href="#cloud-native" class="toc-h2 toc-link" data-title="Cloud Native">Cloud Native</a>
+                    <a href="#cloud-services" class="toc-h2 toc-link" data-title="Cloud Services">Cloud Services</a>
                   </li>
               </ul>
           </li>
@@ -231,10 +233,13 @@
             <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#basic-cloud-installation" class="toc-h2 toc-link" data-title="Basic Cloud Installation">Basic Cloud Installation</a>
+                    <a href="#clone-repository" class="toc-h2 toc-link" data-title="Clone Repository">Clone Repository</a>
                   </li>
                   <li>
-                    <a href="#cloud-native-installation" class="toc-h2 toc-link" data-title="Cloud Native Installation">Cloud Native Installation</a>
+                    <a href="#basic-deployment" class="toc-h2 toc-link" data-title="Basic Deployment">Basic Deployment</a>
+                  </li>
+                  <li>
+                    <a href="#kubernetes-deployment" class="toc-h2 toc-link" data-title="Kubernetes Deployment">Kubernetes Deployment</a>
                   </li>
               </ul>
           </li>
@@ -245,10 +250,13 @@
                     <a href="#prerequisites" class="toc-h2 toc-link" data-title="Prerequisites">Prerequisites</a>
                   </li>
                   <li>
-                    <a href="#provision" class="toc-h2 toc-link" data-title="Provision">Provision</a>
+                    <a href="#provisioning" class="toc-h2 toc-link" data-title="Provisioning">Provisioning</a>
                   </li>
                   <li>
-                    <a href="#deploy" class="toc-h2 toc-link" data-title="Deploy">Deploy</a>
+                    <a href="#api-gateway-oci-functions-and-email-delivery" class="toc-h2 toc-link" data-title="API Gateway, OCI Functions and Email Delivery">API Gateway, OCI Functions and Email Delivery</a>
+                  </li>
+                  <li>
+                    <a href="#deployment" class="toc-h2 toc-link" data-title="Deployment">Deployment</a>
                   </li>
               </ul>
           </li>
@@ -256,7 +264,10 @@
             <a href="#extras" class="toc-h1 toc-link" data-title="Extras">Extras</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#metrics" class="toc-h2 toc-link" data-title="Metrics">Metrics</a>
+                    <a href="#prometheus-and-grafana-monitoring" class="toc-h2 toc-link" data-title="Prometheus and Grafana Monitoring">Prometheus and Grafana Monitoring</a>
+                  </li>
+                  <li>
+                    <a href="#istio-service-mesh" class="toc-h2 toc-link" data-title="Istio Service Mesh">Istio Service Mesh</a>
                   </li>
               </ul>
           </li>
@@ -265,14 +276,47 @@
           </li>
           <li>
             <a href="#acknowledgements" class="toc-h1 toc-link" data-title="Acknowledgements">Acknowledgements</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#community" class="toc-h2 toc-link" data-title="Community">Community</a>
+                  </li>
+                  <li>
+                    <a href="#contributors" class="toc-h2 toc-link" data-title="Contributors">Contributors</a>
+                  </li>
+              </ul>
           </li>
       </ul>
+
+        <div class="smart-toggles">
+          <div>Settings</div>
+            <div class="toggle-group flex flex-middle"
+              data-toggle-name="OS"
+              data-toggle-category="language">
+              <label>OS:</label>
+              <div class="flex">
+                  <a href="#" data-toggle="macos">MacOS</a>
+                  <a href="#" data-toggle="linux">Linux</a>
+                  <a href="#" data-toggle="win">Windows</a>
+              </div>
+            </div>
+            <div class="toggle-group flex flex-middle"
+              data-toggle-name="Helm"
+              data-toggle-category="language">
+              <label>Helm:</label>
+              <div class="flex">
+                  <a href="#" data-toggle="helm3">3.x</a>
+                  <a href="#" data-toggle="helm2">2.x</a>
+              </div>
+            </div>
+        </div>
+
         <ul class="toc-footer">
-            <li><a href="https://github.com/oracle-quickstart/oci-cloudnative">GitHub</a></li>
+            <li><a href="https://github.com/oracle-quickstart/oci-cloudnative">GitHub Project</a></li>
             <li>Made with <icon>♥</icon> by Oracle A-Team</li>
-            <li>© 2019 Oracle</li>
+            <li>© 2019 Oracle and/or its affiliates. All rights reserved.</li>
         </ul>
     </div>
+
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
@@ -288,7 +332,7 @@ scenarios for many Oracle Cloud Infrastructure services.</p>
 <table><thead>
 <tr>
 <th><img src="images/mushop.home-70eb8af5.png" title="MuShop UI" alt="mushop" /></th>
-<th><img src="images/mushop.about-cf3181ef.png" title="MuShop Services" alt="services" /></th>
+<th><img src="images/mushop.about-25560da8.png" title="MuShop Services" alt="services" /></th>
 </tr>
 </thead><tbody>
 </tbody></table>
@@ -304,8 +348,8 @@ subject in Oracle Cloud Infrastructure, while keeping context of the demo applic
 <li>Experience Oracle Cloud services integrated into a single project</li>
 <li>Provide reference implementations and sample code for real-world development</li>
 </ul>
-<h2 id='cloud-native'>Cloud Native</h2>
-<p>The MuShop application highlights many topics related to <a href="https://www.oracle.com/cloud/cloud-native/">Cloud Native</a> application
+<h2 id='cloud-services'>Cloud Services</h2>
+<p>The MuShop application highlights several topics related to <a href="https://www.oracle.com/cloud/cloud-native/">Cloud Native</a> application
 development with Oracle Cloud Infrastructure.</p>
 
 <table><thead>
@@ -315,12 +359,32 @@ development with Oracle Cloud Infrastructure.</p>
 </tr>
 </thead><tbody>
 <tr>
+<td><a href="https://www.oracle.com/cloud/integration/api-platform-cloud/">API Gateway</a></td>
+<td>Fully managed gateway for governed HTTP/S interfaces</td>
+</tr>
+<tr>
 <td><a href="https://www.oracle.com/cloud/compute/container-engine-kubernetes.html">Container Engine for Kubernetes</a></td>
 <td>Enterprise-grade Kubernetes on Oracle Cloud</td>
 </tr>
 <tr>
 <td><a href="https://www.oracle.com/cloud/compute/container-registry.html">Container Registry</a></td>
 <td>Highly available service to distribute container images</td>
+</tr>
+<tr>
+<td><a href="https://www.oracle.com/cloud/networking/email-delivery.html">Email Delivery</a></td>
+<td>Enables sending emails</td>
+</tr>
+<tr>
+<td><a href="https://www.oracle.com/cloud-native/functions/">Functions</a></td>
+<td>Scalable, multitenant serverless functions</td>
+</tr>
+<tr>
+<td><a href="https://www.oracle.com/cloud/systems-management/monitoring/">Monitoring</a></td>
+<td>Integrated metrics from all resources and services</td>
+</tr>
+<tr>
+<td><a href="https://github.com/oracle/oci-service-broker">Open Service Broker</a></td>
+<td>Provisioning cloud resources within Kubernetes</td>
 </tr>
 <tr>
 <td><a href="https://www.oracle.com/cloud/systems-management/resource-manager/">Resource Manager</a></td>
@@ -331,14 +395,6 @@ development with Oracle Cloud Infrastructure.</p>
 <td>Large scale data collection and processing</td>
 </tr>
 <tr>
-<td><a href="https://www.oracle.com/cloud/systems-management/monitoring/">Monitoring</a></td>
-<td>Integrated metrics from all resources and services</td>
-</tr>
-<tr>
-<td><a href="https://github.com/oracle/oci-service-broker">Kubernetes Service Broker</a></td>
-<td>Provisioning cloud resources within Kubernetes</td>
-</tr>
-<tr>
 <td><em>Others coming soon</em></td>
 <td>-</td>
 </tr>
@@ -347,16 +403,8 @@ development with Oracle Cloud Infrastructure.</p>
 <td>Trigger actions in response to infrastructure changes</td>
 </tr>
 <tr>
-<td><a href="https://www.oracle.com/cloud-native/functions/">Functions</a></td>
-<td>Scalable, multitenant serverless functions</td>
-</tr>
-<tr>
 <td><a href="https://www.oracle.com/cloud/systems-management/notifications/">Notifications</a></td>
 <td>Broadcast messages to distributed systems</td>
-</tr>
-<tr>
-<td><a href="https://www.oracle.com/cloud/integration/api-platform-cloud/">API Gateway</a></td>
-<td>Fully managed gateway for governed HTTP/S interfaces</td>
 </tr>
 <tr>
 <td><a href="https://go.oracle.com/LP=78019?elqCampaignId=179851">Logging</a></td>
@@ -374,9 +422,9 @@ development with Oracle Cloud Infrastructure.</p>
 </ul>
 
 <!-- - [Health Checks](https://www.oracle.com/cloud/networking/health-checks.html) -->
-
-<!-- - [Email Delivery](https://www.oracle.com/cloud/networking/email-delivery.html) -->
 <h3 id='mushop-services'>MuShop Services</h3>
+<p><img src="images/mushop.services-f80ff631.png" title="MuShop Services" alt="services" /></p>
+
 <table><thead>
 <tr>
 <th>Service</th>
@@ -392,6 +440,12 @@ development with Oracle Cloud Infrastructure.</p>
 <td>Storefront API</td>
 </tr>
 <tr>
+<td><code>src/assets</code></td>
+<td>Node.js</td>
+<td>Object Storage</td>
+<td>Product images</td>
+</tr>
+<tr>
 <td><code>src/carts</code></td>
 <td>Java</td>
 <td>Autonomous DB (ATP)</td>
@@ -404,6 +458,36 @@ development with Oracle Cloud Infrastructure.</p>
 <td>Product catalogue</td>
 </tr>
 <tr>
+<td><code>src/dbtools</code></td>
+<td>Linux</td>
+<td>Autonomous DB (ATP)</td>
+<td>Database schema initializations</td>
+</tr>
+<tr>
+<td><code>src/edge-router</code></td>
+<td>traefik</td>
+<td></td>
+<td>Request routing</td>
+</tr>
+<tr>
+<td><code>src/events</code></td>
+<td>Go</td>
+<td>Streaming</td>
+<td>Application event data collection</td>
+</tr>
+<tr>
+<td><code>src/fulfillment</code></td>
+<td>Java</td>
+<td></td>
+<td>Order processing</td>
+</tr>
+<tr>
+<td><code>src/functions/newsletter-subscription</code></td>
+<td>Node.js</td>
+<td>Functions</td>
+<td>Newsletter subscription</td>
+</tr>
+<tr>
 <td><code>src/orders</code></td>
 <td>Java</td>
 <td>Autonomous DB (ATP)</td>
@@ -414,24 +498,6 @@ development with Oracle Cloud Infrastructure.</p>
 <td>Go</td>
 <td></td>
 <td>Payment processing</td>
-</tr>
-<tr>
-<td><code>src/router</code></td>
-<td>traefik</td>
-<td></td>
-<td>Request routing</td>
-</tr>
-<tr>
-<td><code>src/shipping</code></td>
-<td>Java</td>
-<td>Streaming</td>
-<td>Shipping producer</td>
-</tr>
-<tr>
-<td><code>src/stream</code></td>
-<td>Java</td>
-<td>Streaming</td>
-<td>Shipping fulfillment</td>
 </tr>
 <tr>
 <td><code>src/storefront</code></td>
@@ -454,8 +520,8 @@ deployment.</p>
 
 <table><thead>
 <tr>
-<th><a href="#basic-cloud-installation">Basic: <code>deploy/basic</code></a></th>
-<th><a href="#cloud-native-installation">Cloud Native: <code>deploy/complete</code></a></th>
+<th><a href="#basic-deployment">Basic: <code>deploy/basic</code></a></th>
+<th><a href="#kubernetes-deployment">Cloud Native: <code>deploy/complete</code></a></th>
 </tr>
 </thead><tbody>
 <tr>
@@ -467,18 +533,22 @@ deployment.</p>
 └── deploy
     ├── basic
     └── complete
-</code></pre>
-<blockquote>
-<p>Options for different MuShop deployment modes</p>
-</blockquote>
-<h2 id='basic-cloud-installation'>Basic Cloud Installation</h2>
-<p>This deployment is designed to run using <strong>only</strong> Always Free resources.
-It uses MuShop source code and the Oracle Cloud Infrastructure
+</code></pre><h2 id='clone-repository'>Clone Repository</h2>
+<p>Each topic in this document references the source code contents, which should be
+cloned to a personal workspace.</p>
+<pre class="highlight shell tab-shell--macos-linux"><code>git clone https://github.com/oracle-quickstart/oci-cloudnative.git
+<span class="nb">cd </span>oci-cloudnative
+</code></pre><pre class="highlight shell tab-shell--win"><code>git clone https://github.com/oracle-quickstart/oci-cloudnative.git
+dir oci-cloudnative
+</code></pre><h2 id='basic-deployment'>Basic Deployment</h2>
+<p>This deployment is designed to run on Oracle Cloud Infrastructure using
+only <strong>Always Free</strong> resources. It uses MuShop source code and the Oracle Cloud Infrastructure
 <a href="https://www.terraform.io/docs/providers/oci/index.html">Terraform Provider</a> to
 produce a <a href="https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm">Resource Manager</a> stack,
 that <em>provisions</em> all required resources and <em>configures</em> the application on
 those resources.</p>
-<pre class="highlight shell tab-shell"><code><span class="nb">cd </span>deploy/basic
+<pre class="highlight shell tab-shell--linux-macos"><code><span class="nb">cd </span>deploy/basic
+</code></pre><pre class="highlight shell tab-shell--win"><code>dir deploy/basic
 </code></pre>
 <blockquote>
 <p>Source directory for basic deployment option</p>
@@ -511,15 +581,19 @@ those resources.</p>
 
 <aside class="notice">
   The application is deployed to the compute instances <strong>asynchronously</strong>,
-  and it may take a few minutes for the public URL to serve the application.
+  and it may take a few minutes for the public URL to serve the application. If
+  the stack is applied successfully but the application returns a
+  <strong>503 Bad Gateway</strong> message, then wait a few moments and reload
+  until the application comes online.
 </aside>
-<h2 id='cloud-native-installation'>Cloud Native Installation</h2>
+<h2 id='kubernetes-deployment'>Kubernetes Deployment</h2>
 <p>This deployment option utilizes <a href="https://github.com/helm/helm"><code>helm</code></a> for
 configuration and installation onto a <a href="https://kubernetes.io/">Kubernetes</a>
 cluster. It is <em>recommended</em> to use an
 <a href="https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengoverview.htm">Oracle Container Engine for Kubernetes</a>
 cluster, however other <strong>standard</strong> Kubernetes clusters will also work.</p>
-<pre class="highlight plaintext"><code>cd deploy/complete/helm-chart
+<pre class="highlight shell tab-shell--linux-macos"><code><span class="nb">cd </span>deploy/complete/helm-chart
+</code></pre><pre class="highlight shell tab-shell--win"><code>dir deploy/complete/helm-chart
 </code></pre>
 <blockquote>
 <p>Path for Cloud Native deployment configurations using <code>helm</code></p>
@@ -531,9 +605,12 @@ Infrastructure involves the use of the following helm charts:</p>
 <ol>
 <li><a href="#setup"><code>setup</code></a>: Installs umbrella chart dependencies on the cluster <em>(optional)</em></li>
 <li><a href="#provision"><code>provision</code></a>: Provisions OCI resources integrated with Service Broker <em>(optional)</em></li>
-<li><a href="#installation"><code>mushop</code></a>: Deploys the MuShop application runtime</li>
+<li><a href="#deploy-mushop"><code>mushop</code></a>: Deploys the MuShop application runtime</li>
 </ol>
 
+<p>To get started, create a namespace for the application and its associative deployments:</p>
+<pre class="highlight shell tab-shell"><code>kubectl create ns mushop
+</code></pre>
 <hr>
 <h3 id='setup'>Setup</h3>
 <p>MuShop provides an umbrella helm chart called <code>setup</code>, which includes several
@@ -590,13 +667,16 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com
 <pre class="highlight shell tab-shell"><code>helm dependency update setup
 </code></pre></li>
 <li><p>Install <code>setup</code> chart:</p>
-<pre class="highlight shell tab-shell"><code>helm install setup <span class="se">\</span>
-  --name mushop-setup <span class="se">\</span>
-  --namespace mushop-setup
+<pre class="highlight shell tab-shell--helm2"><code>helm install setup <span class="se">\</span>
+  --name mushop-utils <span class="se">\</span>
+  --namespace mushop-utilities
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>kubectl create ns mushop-utilities
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install mushop-utils setup <span class="se">\</span>
+  --namespace mushop-utilities
 </code></pre></li>
 <li><p><strong>NOTE</strong> the public <code>EXTERNAL-IP</code> assigned to the ingress controller load balancer:</p>
-<pre class="highlight shell tab-shell"><code>kubectl get svc mushop-setup-nginx-ingress-controller <span class="se">\</span>
-  --namespace mushop-setup
+<pre class="highlight shell tab-shell"><code>kubectl get svc mushop-utils-nginx-ingress-controller <span class="se">\</span>
+  --namespace mushop-utilities
 </code></pre></li>
 </ol>
 <h3 id='deploy-mushop'>Deploy MuShop</h3>
@@ -608,24 +688,29 @@ testing, and cases where cloud connectivity is not available.</p>
 <p>From <code>deploy/complete/helm-chart</code> directory:</p>
 
 <ol>
-<li><p>Deploy &quot;mock mode&quot; with <code>helm</code>:</p>
-<pre class="highlight shell tab-shell"><code>helm install mushop <span class="se">\</span>
+<li><p>Deploy <em>&quot;mock mode&quot;</em> with <code>helm</code>:</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm install mushop <span class="se">\</span>
   --name mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --set global.mock.service<span class="o">=</span><span class="s2">"all"</span>
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install mushop ./mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
   --set global.mock.service<span class="o">=</span><span class="s2">"all"</span>
 </code></pre></li>
 <li><p>Wait for services to be <em>Ready</em>:</p>
-<pre class="highlight shell tab-shell"><code>kubectl get pod --watch
+<pre class="highlight shell tab-shell"><code>kubectl get pod --watch --namespace mushop
 </code></pre></li>
 <li><p>Open a browser with the <code>EXTERNAL-IP</code> created during setup, <strong>OR</strong> <code>port-forward</code>
 directly to the <code>edge</code> service resource:</p>
 <pre class="highlight shell tab-shell"><code>kubectl port-forward <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
   svc/edge 8000:80
 </code></pre>
 <blockquote>
 <p>Using <code>port-forward</code> connecting <a href="http://localhost:8000">localhost:8000</a> to the <code>edge</code> service</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>kubectl get svc mushop-setup-nginx-ingress-controller <span class="se">\</span>
-  --namespace mushop-setup
+<pre class="highlight shell tab-shell"><code>kubectl get svc mushop-utils-nginx-ingress-controller <span class="se">\</span>
+  --namespace mushop-utilities
 </code></pre>
 <blockquote>
 <p>Locating <code>EXTERNAL-IP</code> for Ingress Controller. <strong>NOTE</strong> this will be
@@ -703,7 +788,7 @@ then a Group with specific Policies must be created, and the User added as a mem
 
 <aside class="warning">
    This policy is intentionally broad for the sake of simplicity,
-   and is **not** recommended in most real-world use cases.
+   and is <b>not</b> recommended in most real-world use cases.
    Refer to the <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/overview.htm#three">Documentation</a>
    for more on this topic.
 </aside>
@@ -738,16 +823,28 @@ tenancy. Check minimum resource availability as follows:</p>
 <aside class="notice">
   This does not include requirements in cases where OKE is used.
 </aside>
-<h2 id='provision'>Provision</h2>
-<p>The included <code>provision</code> chart is an application of the open-source <a href="https://github.com/oracle/oci-service-broker">OCI Service Broker</a>
-for <em>provisioning</em> Oracle Cloud Infrastructure services. This implementation utilizes <a href="https://github.com/openservicebrokerapi/servicebroker/blob/v2.14/spec.md">Open Service Broker</a> in Oracle Container Engine for Kubernetes or in other Kubernetes clusters.</p>
-<pre class="highlight plaintext"><code>cd deploy/complete/helm-chart
-</code></pre>
-<ol>
-<li><p>The Service Broker for Kubernetes requires tenancy credentials to provision and
-manage services from within the cluster. Create a secret containing these
+<h2 id='provisioning'>Provisioning</h2>
+<p>Deploying the full application requires cloud backing services from Oracle Cloud Infrastructure.
+Provisioning these services may be done manually of course, but can also be done <em>automatically</em> 
+through the use of <a href="https://github.com/oracle/oci-service-broker">OCI Service Broker</a>. You are
+encouraged to explore each approach.</p>
+
+<table><thead>
+<tr>
+<th><a href="#manual-steps">Manual</a></th>
+<th><a href="#using-service-broker">Automated</a></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Provides steps for provisioning and connecting cloud services to the application</td>
+<td>Uses OCI Service Broker to <em>provision</em> <strong>and</strong> <em>connect</em> the Autonomous Transaction Processing database</td>
+</tr>
+</tbody></table>
+
+<p>In all cases, begin by adding tenancy credentials to manage and
+connect services from within the cluster. Create a secret containing these
 values:</p>
-<pre class="highlight shell tab-shell"><code>kubectl create secret generic oci-service-broker <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oci-credentials <span class="se">\</span>
   --namespace mushop <span class="se">\</span>
   --from-literal<span class="o">=</span><span class="nv">tenancy</span><span class="o">=</span>&lt;TENANCY_OCID&gt; <span class="se">\</span>
   --from-literal<span class="o">=</span><span class="nv">user</span><span class="o">=</span>&lt;USER_OCID&gt; <span class="se">\</span>
@@ -755,101 +852,655 @@ values:</p>
   --from-literal<span class="o">=</span><span class="nv">fingerprint</span><span class="o">=</span>&lt;PUBLIC_API_KEY_FINGERPRINT&gt; <span class="se">\</span>
   --from-literal<span class="o">=</span><span class="nv">passphrase</span><span class="o">=</span>&lt;PRIVATE_API_KEY_PASSPHRASE&gt; <span class="se">\</span>
   --from-file<span class="o">=</span><span class="nv">privatekey</span><span class="o">=</span>&lt;PATH_OF_PRIVATE_API_KEY&gt;
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong> The passphrase entry is <strong>required</strong>. If you do not have passphrase for your key, just leave empty.</p>
+</blockquote>
+<h3 id='manual-steps'>Manual Steps</h3>
+<p>Follow the steps outlined below to provision and configure the cluster with cloud service connection details</p>
+
+<ol>
+<li><p>Provision an Autonomous Transaction Processing (ATP) database. The default options will work well, as will an <strong>Always Free</strong> shape if available. Once <strong>RUNNING</strong> download the DB Connection Wallet and configure secrets as follows:</p>
+
+<ul>
+<li><p>Create <code>oadb-admin</code> secret containing the database administrator password. Used once for schema initializations.</p>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oadb-admin <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">oadb_admin_pw</span><span class="o">=</span><span class="s1">'&lt;DB_ADMIN_PASSWORD&gt;'</span>
+</code></pre></li>
+<li><p>Create <code>oadb-wallet</code> secret with the Wallet <em>contents</em> using the downloaded <code>Wallet_*.zip</code>. The extracted <code>Wallet_*</code> directory is specified as the secret file path. Each file will become a key name in the secret data.</p>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oadb-wallet <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --from-file<span class="o">=</span>&lt;PATH_TO_EXTRACTED_WALLET_FOLDER&gt;
+</code></pre></li>
+<li><p>Create <code>oadb-connection</code> secret with the Wallet <strong>password</strong> and the service <strong>TNS name</strong> to use for connections.</p>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oadb-connection <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">oadb_wallet_pw</span><span class="o">=</span><span class="s1">'&lt;DB_WALLET_PASSWORD&gt;'</span> <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">oadb_service</span><span class="o">=</span><span class="s1">'&lt;DB_TNS_NAME&gt;'</span>
+</code></pre>
+<blockquote>
+<p>Each database has 5 unique TNS Names displayed when the Wallet is downloaded. For a database named <code>mushopdb</code> an example would be <code>mushopdb_TP</code>.</p>
+</blockquote></li>
+</ul></li>
+<li><p><strong>Optional</strong>: Instead of creating a shared database for the entire application, you may establish full separation of services by provisioning <em>individual</em> ATP instances for each service that requires a database. To do so, repeat the previous steps for each database,and give each secret a unique name, for example: <code>carts-oadb-admin</code>, <code>carts-oadb-connection</code>, <code>carts-oadb-wallet</code>.</p>
+
+<ul>
+<li><code>carts</code></li>
+<li><code>catalogue</code></li>
+<li><code>orders</code></li>
+<li><code>user</code></li>
+</ul></li>
+<li><p>Provision a Streaming instance from the Oracle Cloud Infrastructure <a href="https://console.us-phoenix-1.oraclecloud.com/storage/streaming">Console</a>, and make note of the created Stream <code>OCID</code> value. Then create an <code>oss-connection</code> secret containing the Stream connection details.</p>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oss-connection <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">streamId</span><span class="o">=</span><span class="s1">'&lt;STREAM_OCID&gt;'</span> <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">messageEndpoint</span><span class="o">=</span><span class="s1">'&lt;MESSAGE_ENDPOINT_URL&gt;'</span>
+</code></pre></li>
+<li><p><strong>Optional</strong>: Provision a <strong>Public</strong> Object Storage Bucket, and create a Pre-Authenticated Request for the bucket. With the information, create a secret called <code>oos-bucket</code> as follows:</p>
+<pre class="highlight shell tab-shell"><code>kubectl create secret generic oos-bucket <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">region</span><span class="o">=</span>&lt;BUCKET_REGION&gt; <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">name</span><span class="o">=</span>&lt;BUCKET_NAME&gt; <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">namespace</span><span class="o">=</span>&lt;OBJECT_STORAGE_NAMESPACE&gt; <span class="se">\</span>
+  --from-literal<span class="o">=</span><span class="nv">parUrl</span><span class="o">=</span>&lt;PRE_AUTHENTICATED_REQUEST_URL&gt;
+</code></pre>
+<blockquote>
+<p><strong>Object Storage Namespace</strong> may be found with the CLI <code>oci os ns get</code> or from the <a href="https://console.us-ashburn-1.oraclecloud.com/a/tenancy">tenancy information page</a></p>
+</blockquote></li>
+<li><p>Verify the secrets are created and available in the <code>mushop</code> namespace:</p>
+<pre class="highlight shell tab-shell"><code>kubectl get secret --namespace mushop
+</code></pre><pre class="highlight plaintext"><code>NAME              TYPE      DATA   AGE
+oadb-admin        Opaque    1      3m
+oadb-connection   Opaque    2      3m
+oadb-wallet       Opaque    7      3m
+oci-credentials   Opaque    6      3m
+oos-bucket        Opaque    4      3m
+oss-connection    Opaque    2      3m
+</code></pre></li>
+</ol>
+<h3 id='using-service-broker'>Using Service Broker</h3>
+<p>As an alternative to manually provisioning, the included <a href="https://github.com/oracle-quickstart/oci-cloudnative/tree/master/deploy/complete/helm-chart/provision"><code>provision</code></a>
+chart is an application of the open-source <a href="https://github.com/oracle/oci-service-broker">OCI Service Broker</a>
+for <em>provisioning</em> Oracle Cloud Infrastructure services. This implementation utilizes <a href="https://github.com/openservicebrokerapi/servicebroker/blob/v2.14/spec.md">Open Service Broker</a> in Oracle Container Engine for Kubernetes or in other Kubernetes clusters.</p>
+<pre class="highlight shell tab-shell--linux-macos"><code><span class="nb">cd </span>deploy/complete/helm-chart
+</code></pre><pre class="highlight shell tab-shell--win"><code>dir deploy/complete/helm-chart
+</code></pre>
+<ol>
+<li><p>The Service Broker for Kubernetes requires access credentials to provision and
+manage services from within the cluster. Create a secret containing these
+values as described <a href="#provisioning">above</a>. Alternatively, copy the <code>oci-credentials</code>
+secret to the <code>mushop-utilities</code> namespace:</p>
+<pre class="highlight shell tab-shell"><code>kubectl get secret oci-credentials <span class="se">\</span>
+  --namespace<span class="o">=</span>mushop <span class="se">\</span>
+  --export <span class="se">\</span>
+  -o yaml | kubectl apply <span class="se">\</span>
+  --namespace<span class="o">=</span>mushop-utilities -f -
 </code></pre></li>
 <li><p>Deploy the OCI service broker on your cluster. This is done with the <a href="https://github.com/oracle/oci-service-broker">Oracle OCI Service Broker</a> helm chart:</p>
-<pre class="highlight shell tab-shell"><code>helm install https://github.com/oracle/oci-service-broker/releases/download/v1.3.1/oci-service-broker-1.3.1.tgz <span class="se">\</span>
-  --namespace mushop <span class="se">\</span>
-  --name oci-service-broker <span class="se">\</span>
-  --set ociCredentials.secretName<span class="o">=</span>oci-service-broker <span class="se">\</span>
+<pre class="highlight shell tab-shell--helm2"><code>helm install https://github.com/oracle/oci-service-broker/releases/download/v1.4.0/oci-service-broker-1.4.0.tgz <span class="se">\</span>
+  --namespace mushop-utilities <span class="se">\</span>
+  --name oci-broker <span class="se">\</span>
+  --set ociCredentials.secretName<span class="o">=</span>oci-credentials <span class="se">\</span>
+  --set storage.etcd.useEmbedded<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --set tls.enabled<span class="o">=</span><span class="nb">false</span>
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install oci-broker https://github.com/oracle/oci-service-broker/releases/download/v1.4.0/oci-service-broker-1.4.0.tgz <span class="se">\</span>
+  --namespace mushop-utilities <span class="se">\</span>
+  --set ociCredentials.secretName<span class="o">=</span>oci-credentials <span class="se">\</span>
   --set storage.etcd.useEmbedded<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
   --set tls.enabled<span class="o">=</span><span class="nb">false</span>
 </code></pre>
 <blockquote>
 <p>The above command will deploy the OCI Service Broker using an embedded etcd instance. It is not recommended to deploy the OCI Service Broker using an embedded etcd instance and tls disabled in production environments, instead a separate etcd cluster should be setup and used by the OCI Service Broker.</p>
 </blockquote></li>
-<li><p>Now establish the link between Service Catalog and the OCI Service Broker implementation by installing the <code>provision</code> chart:</p>
-<pre class="highlight shell tab-shell"><code>helm install provision <span class="se">\</span>
+</ol>
+
+<p><aside class="warning">
+    For the mushop <code>helm</code> deployment, the OCI Service Broker <b>MUST</b> be installed
+    on the same namespace used by the <code>setup</code> chart. For convenience, the documentation
+    commands defaults both the <code>setup</code> and OCI Service Broker charts to use
+    the <code>mushop-utilities</code> namespace.
+  </aside></p>
+
+<ol>
+<li><p>Next utilize the OCI Service Broker implementation to provision services by installing the included <code>provision</code> chart:</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm install provision <span class="se">\</span>
   --namespace mushop <span class="se">\</span>
   --name mushop-provision <span class="se">\</span>
-  --set skip.ociCredentials<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  --set global.osb.compartmentId<span class="o">=</span>&lt;compartmentId&gt;
+  --set global.osb.compartmentId<span class="o">=</span>&lt;COMPARTMENT_ID&gt; <span class="se">\</span>
+  --set global.osb.objectstoragenamespace<span class="o">=</span>&lt;OBJECT_STORAGE_NAMESPACE&gt;
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install mushop-provision provision <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --set global.osb.compartmentId<span class="o">=</span>&lt;COMPARTMENT_ID&gt; <span class="se">\</span>
+  --set global.osb.objectstoragenamespace<span class="o">=</span>&lt;OBJECT_STORAGE_NAMESPACE&gt;
 </code></pre>
 <blockquote>
-<p>Note that <code>ociCredentials</code> were created previously</p>
+<p><strong>Object Storage Namespace</strong> may be found with the CLI <code>oci os ns get</code> or from the <a href="https://console.us-ashburn-1.oraclecloud.com/a/tenancy">tenancy information page</a></p>
 </blockquote></li>
-<li><p>Verify <code>serviceinstances</code> and <code>servicebindings</code> are <strong>READY</strong></p>
+<li><p>It will take a few minutes for the services database to provision, and the respective bindings to become available. Verify <code>serviceinstances</code> and <code>servicebindings</code> are <strong>READY</strong>:</p>
 <pre class="highlight plaintext"><code>kubectl get serviceinstances -A
+</code></pre><pre class="highlight plaintext"><code>NAME                   CLASS                                      PLAN       STATUS   AGE
+mushop-atp             ClusterServiceClass/atp-service            standard   Ready    1d
+mushop-objectstorage   ClusterServiceClass/object-store-service   standard   Ready    1d
+mushop-oss             ClusterServiceClass/oss-service            standard   Ready    1d
 </code></pre><pre class="highlight plaintext"><code>kubectl get servicebindings -A
+</code></pre><pre class="highlight plaintext"><code>NAME                         SERVICE-INSTANCE       SECRET-NAME                  STATUS   AGE
+mushop-bucket-par-binding    mushop-objectstorage   mushop-bucket-par-binding    Ready    1d
+mushop-oadb-wallet-binding   mushop-atp             mushop-oadb-wallet-binding   Ready    1d
+mushop-oss-binding           mushop-oss             mushop-oss-binding           Ready    1d
 </code></pre></li>
 </ol>
-<h2 id='deploy'>Deploy</h2>
-<p>Having completed the <a href="#provision">Provisioning</a> steps above, the <code>mushop</code> deployment
-helm chart is used with settings to leverage cloud backing services and their resulting
-<code>servicebindings</code> with connection information</p>
-<pre class="highlight shell tab-shell"><code>helm install mushop <span class="se">\</span>
-  --namespace mushop <span class="se">\</span>
-  --name mushop <span class="se">\</span>
-  --set global.osb.atp<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  --set skip.streaming<span class="o">=</span><span class="nb">true</span>
-</code></pre>
+<h2 id='api-gateway-oci-functions-and-email-delivery'>API Gateway, OCI Functions and Email Delivery</h2>
 <aside class="notice">
-  The above command includes <code>--skip.streaming=true</code> indicating that the Streaming
-  configurations should be excluded. Refer to details in <a href="https://github.com/oracle-quickstart/oci-cloudnative/blob/master/deploy/complete/helm-chart/mushop/values.yaml">values.yaml</a> for information on connecting to the Streaming service
+  Note that this is <b>OPTIONAL</b>. If you don't want to configure Email Delivery and deploy a function with API Gateway, skip to the
+  <a href="#deployment">Deployment</a> section.
 </aside>
-<h1 id='extras'>Extras</h1><h2 id='metrics'>Metrics</h2>
+<h3 id='configure-email-delivery'>Configure Email Delivery</h3>
+<p>If you are planning to use the API gateway and Oracle Functions, to send emails using OCI Email Delivery you need to configure an approved sender first.</p>
+
+<ol>
+<li>From the OCI console, click <strong>Email Delivery</strong> -&gt; <strong>Email Approved Sender</strong></li>
+<li>Click the <strong>Create Approved Sender</strong></li>
+<li>Enter the email address, for example: <code>mushop@example.com</code></li>
+<li>Click <strong>Create Approved Sender</strong></li>
+</ol>
+
+<blockquote>
+<p>Note: if you have your own domain, you can enter a different address (e.g.<code>mushop@[yourdomain.com]</code>) and also configure SPF record for the sender. This involves adding a DNS record to your domain. You can follow <a href="https://docs.cloud.oracle.com/iaas/Content/Email/Tasks/configurespf.htm">these</a> instructions to set up SPF.</p>
+</blockquote>
+
+<p>Next, you need to generate the SMTP credentials that will allow you to log in to the SMTP server and send the email. Follow the <a href="https://docs.cloud.oracle.com/iaas/Content/Email/Tasks/generatesmtpcredentials.htm">Generate SMTP Credentails for a User</a> to get the SMTP host, port, username and password.</p>
+
+<p>The SMTP credentails (host, port, username and password) and the approved sender email address (e.g. <code>mushop@example.com</code>) will be provided to the function as configuration values later, so make sure you save these values somewhere.</p>
+<h3 id='configure-function-application'>Configure function application</h3>
+<p>Each function needs to live inside of an application. You can create a new application either through the console, API or the Fn CLI. An application has a name (e.g. <code>mushop-app</code>) and the VCN and a subnet in which to run the functions. The one guideline here is to pick the subnets that are in the same region as the Docker registry you specified in your context YAML earlier - check these <a href="https://docs.cloud.oracle.com/iaas/Content/Functions/Tasks/functionscreatingapps.htm">docs</a> for more information.</p>
+
+<p>The first step you need to do is to ensure your tenancy is configured for function development. You can follow the <a href="https://docs.cloud.oracle.com/iaas/Content/Functions/Tasks/functionsconfiguringtenancies.htm">Configuring Your Tenancy for Function Development</a> documentation.</p>
+
+<p>As a next step you will need to install the <a href="https://github.com/fnproject/cli">Fn CLI</a>. If on a Mac and you&#39;re using <a href="https://brew.sh">Brew</a>, you can run:</p>
+<pre class="highlight shell tab-shell"><code>brew install fn
+</code></pre>
+<p>Finally, you will need configure the Fn CLI - you can follow <a href="https://docs.cloud.oracle.com/iaas/Content/Functions/Tasks/functionscreatefncontext.htm">these instructions</a> that will guide you through creating a context file and configuring it with an image registry.</p>
+
+<p>To create an application using Fn CLI, run:</p>
+<pre class="highlight shell tab-shell"><code> fn create app <span class="o">[</span>APP_NAME] --annotation oracle.com/oci/subnetIds<span class="o">=</span><span class="s1">'["ocid1.subnet.oc1.iad...."]'</span>
+</code></pre>
+<blockquote>
+<p>Note: make sure you replace <code>APP_NAME</code> and the <code>ocid1.subnet</code> with actual values</p>
+</blockquote>
+<h3 id='deploy-and-configure-the-function'>Deploy and configure the function</h3>
+<p>To deploy a function to an app, you can run the following command within the function folder (<code>/src/functions/newsletter-subscription</code>):</p>
+<pre class="highlight shell tab-shell"><code>fn deploy --app <span class="o">[</span>APP_NAME]
+</code></pre>
+<blockquote>
+<p>Note: use <code>fn -v deploy --app [APP_NAME]</code> to get verbose output in case you&#39;re running into issues.</p>
+</blockquote>
+
+<p>In the remainder of the document, we will use <code>mushop-app</code> for the application name.</p>
+
+<p>You need to provide additional configuration (SMTP credentails) for the function to work properly and be able to send emails.</p>
+
+<p>Once you&#39;ve successfully deployed the function, you can use the Fn CLI to add configuration values (note that you can also do the same through the Console UI).</p>
+
+<p>Run the following commands to configure SMTP settings and the approved sender (replace the values):</p>
+<pre class="highlight shell tab-shell"><code>fn config <span class="k">function </span>mushop-app newsletter-subscription SMTP_USER &lt;smtp_username&gt;
+fn config <span class="k">function </span>mushop-app newsletter-subscription SMTP_PASSWORD &lt;smtp_password&gt;
+fn config <span class="k">function </span>mushop-app newsletter-subscription SMTP_HOST &lt;smtp_host&gt;
+fn config <span class="k">function </span>mushop-app newsletter-subscription SMTP_PORT &lt;smtp_port&gt;
+fn config <span class="k">function </span>mushop-app newsletter-subscription APPROVED_SENDER_EMAIL &lt;approved_sender_email&gt;
+</code></pre><h3 id='creating-an-api-gateway'>Creating an API gateway</h3>
+<p>You will be using an <a href="https://docs.cloud.oracle.com/iaas/Content/APIGateway/Concepts/apigatewayoverview.htm">API Gateway</a> to access the functions. To prepare your tenancy for using the gateway, check the <a href="https://docs.cloud.oracle.com/iaas/Content/APIGateway/Concepts/apigatewayprerequisites.htm">Preparing for API Gateway</a> documentation.</p>
+
+<p>The quickest way to create a gateway is through the OCI console:</p>
+
+<ol>
+<li>Click <strong>Developer Services</strong> -&gt; <strong>API Gateway</strong> from the sidebar on the left</li>
+<li>Click the <strong>Create Gateway</strong> button</li>
+<li>Enter the following values (you can use a different name if you&#39;d like):
+
+<ul>
+<li>Name: <strong>mushop-gateway</strong></li>
+<li>Type: <strong>Public</strong></li>
+<li>Virtual Cloud Network: <em>Pick one from the dropdown</em></li>
+<li>Subnet: <em>Pick the subnet from the dropdown</em></li>
+</ul></li>
+<li>Click <strong>Create</strong></li>
+<li>When gateway is created, click the <strong>Deployments</strong> link from the sidebar on the left</li>
+<li>Under the <strong>Deployments</strong>, click the <strong>Create Deployment</strong> button</li>
+<li>Make sure <strong>From Scratch</strong> option is selected at the top and enter the following values (you can leave the other values as they are - i.e. no need to enable CORS, Authentication or Rate Limiting):
+
+<ul>
+<li>Name: <strong>newsletter-subscription</strong></li>
+<li>Path prefix: <strong>/newsletter</strong></li>
+<li>Compartment: <Pick your compartment></li>
+<li>Execution log: <strong>Enabled</strong></li>
+<li>Log level: <strong>Error</strong></li>
+</ul></li>
+<li>Click <strong>Next</strong> to define the route</li>
+<li>Enter the following values for <strong>Route 1</strong>:
+
+<ul>
+<li>Path: <strong>/subscribe</strong></li>
+<li>Methods: <strong>POST</strong></li>
+<li>Type: <strong>Oracle Functions</strong></li>
+<li>Application: <strong>mushop-app</strong> (or other, if you used a different name)</li>
+<li>Function name: <strong>newsletter-subscription</strong></li>
+</ul></li>
+<li>Click the <strong>Show Route Logging Policies</strong> link and enable <strong>Execution Log</strong></li>
+<li>Click <strong>Next</strong> and review the deployment</li>
+<li>Click <strong>Create</strong> to create the gateway deployment</li>
+</ol>
+
+<p>When deployment completes, navigate to it to get the URL for the gateway. Click the <strong>Show</strong> link next to the <strong>Endpoint</strong> label to reveal the full URL for the deployment. It should look like this:</p>
+<pre class="highlight plaintext"><code>https://aaaaaaaaa.apigateway.us-ashburn-1.oci.customer-oci.com/newsletter/subscribe
+</code></pre>
+<p>You will use this URL in <code>values-dev.yaml</code> when creating the deployment. </p>
+<h2 id='deployment'>Deployment</h2>
+<p>Having completed the <a href="#provisioning">provisioning</a> steps above, the <code>mushop</code> deployment
+helm chart is installed using settings to leverage cloud backing services.</p>
+
+<ol>
+<li><p>Make a copy of the <a href="https://github.com/oracle-quickstart/oci-cloudnative/blob/master/deploy/complete/helm-chart/mushop/values-dev.yaml"><code>values-dev.yaml</code></a> file and store somewhere on your machine as <code>myvalues.yaml</code>. Then complete the missing values (e.g. secret names) like the following:</p>
+<pre class="highlight yaml tab-yaml"><code><span class="na">global</span><span class="pi">:</span>
+  <span class="na">ociAuthSecret</span><span class="pi">:</span> <span class="s">oci-credentials</span>        <span class="c1"># OCI authentication credentials secret</span>
+  <span class="na">ossStreamSecret</span><span class="pi">:</span> <span class="s">oss-connection</span>       <span class="c1"># Name of Stream connection secret</span>
+  <span class="na">oadbAdminSecret</span><span class="pi">:</span> <span class="s">oadb-admin</span>           <span class="c1"># Name of DB Admin secret</span>
+  <span class="na">oadbWalletSecret</span><span class="pi">:</span> <span class="s">oadb-wallet</span>         <span class="c1"># Name of Wallet secret</span>
+  <span class="na">oadbConnectionSecret</span><span class="pi">:</span> <span class="s">oadb-connection</span> <span class="c1"># Name of DB Connection secret</span>
+  <span class="na">oosBucketSecret</span><span class="pi">:</span> <span class="s">oos-bucket</span>           <span class="c1"># Object storage bucket secret name (optional)</span>
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong> If it&#39;s desired to connect a separate databases for a given service, you can specify values specific for each service, such as <code>carts.oadbAdminSecret</code>, <code>carts.oadbWalletSecret</code>...</p>
+</blockquote>
+
+<aside class="notice">
+Database (<code>oadb-*</code>), stream (<code>oss-*</code>), and bucket (<code>oos-*</code>) secrets  may be omitted if using the automated service broker approach.
+</aside></li>
+<li><p><strong>Optional</strong>: If an Object Storage bucket is provisioned, you can configure the <code>api</code> environment to use the object URL prefix in <code>myvalues.yaml</code>:</p>
+<pre class="highlight yaml tab-yaml"><code><span class="na">api</span><span class="pi">:</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="na">mediaUrl</span><span class="pi">:</span> <span class="c1"># https://objectstorage.[REGION].oraclecloud.com/n/[NAMESPACE]/b/[BUCKET_NAME]/o/</span>
+</code></pre></li>
+<li><p><strong>Optional</strong>: If you configured the Email Delivery, API gateway and the function, add the following snippet to your <code>myvalues.yaml</code> file:</p>
+<pre class="highlight yaml tab-yaml"><code><span class="na">api</span><span class="pi">:</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="na">mediaUrl</span><span class="pi">:</span> <span class="c1"># ...</span>
+    <span class="na">newsletterSubscribeUrl</span><span class="pi">:</span> <span class="s">https://[API_GATEWAY_URL]</span>
+</code></pre></li>
+<li><p>Install the <a href="https://github.com/oracle-quickstart/oci-cloudnative/tree/master/deploy/complete/helm-chart/mushop"><code>mushop</code></a> application helm chart using the <code>myvalues.yaml</code> created above:</p>
+
+<ul>
+<li><p><strong>OPTION 1:</strong> With cloud services provisioned <strong>manually</strong>:</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm install ./mushop <span class="se">\</span>
+  --name mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --values myvalues.yaml
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install mushop ./mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --values myvalues.yaml
+</code></pre></li>
+<li><p><strong>OPTION 2:</strong> When using <strong>OCI Service Broker</strong> (<code>provision</code> chart):</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm install ./mushop <span class="se">\</span>
+  --name mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --set global.osb.atp<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --set global.osb.oss<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --set global.osb.objectstorage<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --values myvalues.yaml
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm install mushop ./mushop <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  --set global.osb.atp<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --set global.osb.oss<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --set global.osb.objectstorage<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  --values myvalues.yaml
+</code></pre></li>
+</ul></li>
+<li><p>Wait for deployment pods to be <strong>RUNNING</strong> and init pods to show <strong>COMPLETED</strong>:</p>
+<pre class="highlight shell tab-shell"><code>kubectl get pods --namespace mushop --watch
+</code></pre><pre class="highlight plaintext"><code>NAME                                  READY   STATUS      RESTARTS   AGE
+mushop-api-769c4d9fd8-hp7mc           1/1     Running     0          31s
+mushop-assets-dd5756599-pxngg         1/1     Running     0          33s
+mushop-assets-deploy-1-n2bk6          0/1     Completed   0          33s
+mushop-carts-6f5db9565f-4w65t         1/1     Running     0          33s
+mushop-carts-init-1-dcs82             0/1     Completed   0          33s
+mushop-catalogue-76977479fd-thdq4     1/1     Running     0          32s
+mushop-catalogue-init-1-twx9x         0/1     Completed   0          33s
+mushop-edge-648c989cd4-6g9dk          1/1     Running     0          32s
+mushop-events-569f4744c9-l7pqt        1/1     Running     0          30s
+mushop-fulfillment-85489cd99b-lzwqp   1/1     Running     0          30s
+mushop-nats-84dc5db659-7rpbl          1/1     Running     0          32s
+mushop-orders-6dcc7bbbb6-658tq        1/1     Running     0          33s
+mushop-orders-init-1-tm8ls            0/1     Completed   0          33s
+mushop-payment-c7dccd8cc-t9wmj        1/1     Running     0          33s
+mushop-session-5ff4c9557f-dmbq8       1/1     Running     0          33s
+mushop-storefront-8656597656-lgdlk    1/1     Running     0          33s
+mushop-user-54f4978d68-qhr7n          0/1     Running     0          31s
+mushop-user-init-1-8k62c              0/1     Completed   0          33s
+</code></pre></li>
+</ol>
+
+<blockquote>
+<p>Note: if you installed Istio service mesh, you should see <code>2/2</code> in the <code>READY</code> column and <code>1/2</code> for the init pods and the assets deploy pod. The reason you see <code>2/2</code> is because Istio injects a sidecar proxy container into each pod.</p>
+</blockquote>
+
+<ol>
+<li><p>Open a browser with the <code>EXTERNAL-IP</code> created during setup
+<strong>OR</strong> <code>port-forward</code> directly to the <code>edge</code> service resource <strong>OR</strong> use the <code>EXTERNAL-IP</code> of the Istio ingress gateway (if you installed Istio service mesh):</p>
+<pre class="highlight shell tab-shell"><code>kubectl port-forward <span class="se">\</span>
+  --namespace mushop <span class="se">\</span>
+  svc/edge 8000:80
+</code></pre>
+<blockquote>
+<p>Using <code>port-forward</code> connecting <a href="http://localhost:8000">localhost:8000</a> to the <code>edge</code> service</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>kubectl get svc mushop-utils-nginx-ingress-controller <span class="se">\</span>
+  --namespace mushop-utilities
+</code></pre>
+<blockquote>
+<p>Locating <code>EXTERNAL-IP</code> for Ingress Controller. <strong>NOTE</strong> this will be
+<a href="https://localhost">localhost</a> on local clusters.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>kubectl get svc istio-ingressgateway <span class="se">\</span>
+  --namespace istio-system
+</code></pre>
+<blockquote>
+<p>Locating <code>EXTERNAL-IP</code> for Istio Ingress Gateway. <strong>NOTE</strong> this will be
+<a href="https://localhost">localhost</a> on local clusters.</p>
+</blockquote></li>
+</ol>
+<h1 id='extras'>Extras</h1><h2 id='prometheus-and-grafana-monitoring'>Prometheus and Grafana Monitoring</h2>
 <p>Prometheus and Grafana are installed part of the <a href="#setup"><code>setup</code></a> umbrella helm chart.
 Revisit the application charts and connect to some Grafana dashboards:</p>
 
 <ol>
 <li><p>List helm releases:</p>
-<pre class="highlight plaintext"><code>helm list
-</code></pre><pre class="highlight plaintext"><code>NAME          REVISION        UPDATED                         STATUS          CHART                   APP VERSION     NAMESPACE
-mushop-setup  1               Tue Nov 12 06:12:45 2019        DEPLOYED        mushop-setup-0.0.1      1.0             mushop-setup
-mushop        1               Wed Nov 13 20:23:28 2019        DEPLOYED        mushop-0.1.0            1.0             mushop
+<pre class="highlight plaintext"><code>helm list --all-namespaces
+</code></pre><pre class="highlight plaintext"><code>NAME                    NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                           APP VERSION
+mushop                  mushop                  1               2020-01-31 21:14:48.511917 -0600 CST    deployed        mushop-0.1.0                    1.0
+mushop-utils            mushop-utilities        1               2020-01-31 20:32:05.864769 -0600 CST    deployed        mushop-setup-0.0.1              1.0
 </code></pre></li>
-<li><p>Get the Grafana outputs from the <code>mushop-setup</code> installation:</p>
-<pre class="highlight plaintext"><code>helm status mushop-setup
+<li><p>Get the Grafana outputs from the <code>mushop-utils</code> (setup chart) installation:</p>
+<pre class="highlight plaintext"><code>helm status mushop-utils --namespace mushop-utilities
 
 ## Grafana...
 </code></pre></li>
 <li><p>Get the auto-generated Grafana <code>admin</code> password:</p>
-<pre class="highlight plaintext"><code>kubectl get secret -n mushop-setup mushop-setup-grafana \
-  -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+<pre class="highlight plaintext"><code>kubectl get secret -n mushop-utilities mushop-utils-grafana \
+ -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 </code></pre></li>
 <li><p>Connect to the <a href="http://localhost:3000">dashboard</a> with <code>admin</code>/<code>&lt;password&gt;</code>:</p>
-<pre class="highlight plaintext"><code>kubectl port-forward -n mushop-setup \
-  svc/mushop-setup-grafana 3000:80
+<pre class="highlight plaintext"><code>kubectl port-forward -n mushop-utilities \
+  svc/mushop-utils-grafana 3000:80
 </code></pre></li>
 <li><p>Import <a href="https://grafana.com/grafana/dashboards">dashboards</a> from Grafana:</p>
 
 <ul>
 <li><a href="https://grafana.com/grafana/dashboards/6417">Kubernetes Cluster</a></li>
 <li><a href="https://grafana.com/grafana/dashboards/6336">Kubernetes Pods</a></li>
-</ul>
+</ul></li>
+</ol>
 
+<aside class="notice">
+  Many community dashboards exist, those above are some basic recommendations
+</aside>
+<h2 id='istio-service-mesh'>Istio Service Mesh</h2>
+<aside class="notice">
+  Note that this is <b>OPTIONAL</b>. If you don't want to install Istio service mesh, skip to the
+  <a href="#deployment">Deployment</a> section. Additionally, you don't need to install Grafana and Prometheus from the setup chart as they are already included in the Istio installation.
+</aside>
+
+<p>In this section you can install and configure Istio service mesh. The mesh needs to be installed before you deploy Mushop for the service mesh proxies to get injected next to each Mushop service. </p>
+
+<p>These sidecar proxies intercept the traffic between services and collect data on all requests as well as allow scenarios such as traffic routing and failure injection.</p>
+<h3 id='download-and-install-istio'>Download and install Istio</h3>
+<ol>
+<li>Download the latest Istio release (<code>1.4.6</code> at the time of writing this):</li>
+</ol>
+<pre class="highlight shell tab-shell"><code>curl -L https://istio.io/downloadIstio | sh -
+</code></pre>
+<ol>
+<li>Go to the <code>istio-1.4.6</code> folder and add the <code>istioctl</code> to your path:</li>
+</ol>
+<pre class="highlight shell tab-shell"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PWD</span>/bin:<span class="nv">$PATH</span>
+</code></pre>
+<p>Before you continue with Istio installation, run the <code>verify-install</code> command to make sure Istio can be installed on your cluster:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>istioctl verify-install
+...
+Install Pre-Check passed! The cluster is ready <span class="k">for </span>Istio installation.
+</code></pre>
+<p>If you get the <code>Pre-Check passed</code> message, you can continue. </p>
+
+<ol>
+<li>Install the Istio <code>demo</code> profile:</li>
+</ol>
+<pre class="highlight shell tab-shell"><code>istioctl manifest apply --set <span class="nv">profile</span><span class="o">=</span>demo
+</code></pre>
+<aside class="notice">
+  Istio supports different installation profiles such as <i>default</i>, <i>demo</i>, <i>minimal</i>, <i>sds</i> and <i>remote</i>. In this lab we will be using the <i>demo</i> installation as it contains all components and it is designed to showcase Istio functionality. Note that <i>demo</i> profile is <b>not</b> an appropriate installation for production.
+</aside>
+
+<p>The output of the above command should look something like this:</p>
+<pre class="highlight plaintext"><code>$ istioctl manifest apply --set profile=demo
+- Applying manifest for component Base...
+✔ Finished applying manifest for component Base.
+- Applying manifest for component EgressGateway...
+- Applying manifest for component Prometheus...
+- Applying manifest for component Pilot...
+- Applying manifest for component Tracing...
+- Applying manifest for component Citadel...
+- Applying manifest for component Injector...
+- Applying manifest for component Galley...
+- Applying manifest for component Kiali...
+- Applying manifest for component IngressGateway...
+- Applying manifest for component Policy...
+- Applying manifest for component Telemetry...
+- Applying manifest for component Grafana...
+✔ Finished applying manifest for component Galley.
+✔ Finished applying manifest for component Kiali.
+✔ Finished applying manifest for component Injector.
+✔ Finished applying manifest for component Prometheus.
+✔ Finished applying manifest for component Citadel.
+✔ Finished applying manifest for component Pilot.
+✔ Finished applying manifest for component Policy.
+✔ Finished applying manifest for component IngressGateway.
+✔ Finished applying manifest for component Tracing.
+✔ Finished applying manifest for component EgressGateway.
+✔ Finished applying manifest for component Telemetry.
+✔ Finished applying manifest for component Grafana.
+
+
+✔ Installation complete
+</code></pre>
+<p>You also need to run <code>kubectl get pods -n istio-system</code> and ensure all pods are in the running state (the value of the <code>STATUS</code> column for each pod should be <code>Running</code>)</p>
+
+<p>Before continuing with the Mushop deployment, you also need to label the <code>mushop</code> namespace in order for Istio to automatically inject the Envoy sidecar proxy next to each Mushop service.</p>
+
+<ol>
+<li>Create the <code>mushop</code> namespace:</li>
+</ol>
+<pre class="highlight shell tab-shell"><code>kubectl create ns mushop
+</code></pre>
+<ol>
+<li>Label the namespace with <code>istio-injection=enabled</code>:</li>
+</ol>
+<pre class="highlight shell tab-shell"><code>kubectl label namespace mushop istio-injection<span class="o">=</span>enabled
+</code></pre>
+<ol>
+<li>Follow the instructions for <a href="#deployment">deploying Mushop</a>. </li>
+</ol>
+<h3 id='creating-istio-resources'>Creating Istio resources</h3>
+<p>In order to configure the traffic routing and the ingress gateway, you will need to deploy a Gateway resource and a VirtualService resource.</p>
+
+<ol>
+<li>Deploy a Gateway resource:</li>
+</ol>
+
+<p>MacOS:</p>
+<pre class="highlight shell tab-shell"><code>cat <span class="sh">&lt;&lt; EOF | kubectl apply -f -
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: gateway
+  namespace: mushop
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - '*'
+EOF
+</span></code></pre>
+<p>Windows:</p>
+<pre class="highlight shell tab-shell"><code><span class="s2">"apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: gateway
+  namespace: mushop
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - '*'"</span> | kubectl apply -f -
+</code></pre>
+<ol>
+<li>Deploy a VirtualService:</li>
+</ol>
+
+<p>MacOS:</p>
+<pre class="highlight shell tab-shell"><code>cat <span class="sh">&lt;&lt;EOF | kubectl apply -f -
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: edge
+  namespace: mushop
+spec:
+  hosts:
+    - '*'
+  gateways:
+    - gateway
+  http:
+  - match:
+    - uri:
+        prefix: /api
+    route:
+    - destination:
+        host: mushop-api.mushop.svc.cluster.local
+  - match:
+    - uri:
+        prefix: /assets
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: mushop-assets.mushop.svc.cluster.local
+  - route:
+    - destination:
+        host: mushop-storefront.mushop.svc.cluster.local
+        port:
+          number: 80
+EOF
+</span></code></pre>
+<p>Windows:</p>
+<pre class="highlight shell tab-shell"><code><span class="s2">"apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: edge
+  namespace: mushop
+spec:
+  hosts:
+    - '*'
+  gateways:
+    - gateway
+  http:
+  - match:
+    - uri:
+        prefix: /api
+    route:
+    - destination:
+        host: mushop-api.mushop.svc.cluster.local
+  - match:
+    - uri:
+        prefix: /assets
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: mushop-assets.mushop.svc.cluster.local
+  - route:
+    - destination:
+        host: mushop-storefront.mushop.svc.cluster.local
+        port:
+          number: 80"</span> | kubectl apply -f -
+</code></pre>
+<ol>
+<li><p>Open a browser with the <code>EXTERNAL-IP</code> of the Instio ingress gateway:</p>
+<pre class="highlight shell tab-shell"><code>kubectl get svc istio-ingressgateway <span class="se">\</span>
+  --namespace istio-system
+</code></pre>
 <blockquote>
-<p>Many community dashboards exist, those above are some basic recommendations</p>
+<p>Locating <code>EXTERNAL-IP</code> for Istio Ingress Gateway. <strong>NOTE</strong> this will be
+<a href="https://localhost">localhost</a> on local clusters.</p>
 </blockquote></li>
 </ol>
+<h3 id='kiali-dashboard'>Kiali Dashboard</h3>
+<p>Kiali is a service mesh observability tool that allows you to understand the structure of your service mesh, visualize the service inside the mesh and provides the health of the mesh. Additionally, you can view detailed metrics using Grafana integration and distribute tracing with Jaeger integration.</p>
+
+<ol>
+<li>From the terminal, open Kiali dashboard</li>
+</ol>
+<pre class="highlight shell tab-shell"><code>istioctl dashboard kiali
+</code></pre>
+<ol>
+<li><p>Click the <strong>Graph</strong> option from the sidebar.</p></li>
+<li><p>From the dropdown select the <em>mushop</em> namespace.</p></li>
+<li><p>You should see a service graph that looks similar to the figure below;</p></li>
+</ol>
+
+<p><img src="images/mesh/sm-kiali-graph-02a3896e.png" alt="Kiali - service graph" /></p>
 <h1 id='cleanup'>Cleanup</h1>
 <p>The following list represents cleanup operations, which may vary
 depending on the actions performed for setup and deployment of MuShop.</p>
 
 <ul>
 <li><p>List any <code>helm</code> releases that may have been installed:</p>
-<pre class="highlight plaintext"><code>helm list
-</code></pre><pre class="highlight plaintext"><code>NAME          REVISION        UPDATED                         STATUS          CHART                   APP VERSION     NAMESPACE
-mushop-setup  1               Tue Nov 12 06:12:45 2019        DEPLOYED        mushop-setup-0.0.1      1.0             mushop-setup
-mushop        1               Wed Nov 13 20:23:28 2019        DEPLOYED        mushop-0.1.0            1.0             mushop
+<pre class="highlight shell tab-shell--helm2"><code>helm list
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm list --all-namespaces
+</code></pre><pre class="highlight plaintext"><code>NAME                    NAMESPACE               REVISION        UPDATED                                 STATUS          CHART                           APP VERSION   
+mushop                  mushop                  1               2020-01-31 21:14:48.511917 -0600 CST    deployed        mushop-0.1.0                    1.0         
+oci-broker              mushop-utilities        1               2020-01-31 20:46:30.565257 -0600 CST    deployed        oci-service-broker-1.4.0                   
+mushop-provision        mushop                  1               2020-01-31 21:01:54.086599 -0600 CST    deployed        mushop-provision-0.1.0          0.1.0      
+mushop-utils            mushop-utilities        1               2020-01-31 20:32:05.864769 -0600 CST    deployed        mushop-setup-0.0.1              1.0  
 </code></pre></li>
 <li><p>Remove the application from Kubernetes where <code>--name mushop</code> was used during install:</p>
-<pre class="highlight shell tab-shell"><code>helm delete --purge mushop
+<pre class="highlight shell tab-shell--helm2"><code>helm delete --purge mushop
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm delete mushop -n mushop
+</code></pre></li>
+<li><p>If used OCI Service broker, remove the <code>provision</code> dependency installation, including ATP Bindings (Wallet, password) and instances:</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm delete --purge mushop-provision
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm delete mushop-provision -n mushop
+</code></pre></li>
+<li><p>If used OCI Service broker, remove the <code>osb</code> installation:</p>
+<pre class="highlight shell tab-shell--helm2"><code>helm delete --purge oci-broker
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm delete oci-broker -n mushop-utilities
 </code></pre></li>
 <li><p>Remove the <code>setup</code> cluster dependency installation:</p>
-<pre class="highlight shell tab-shell"><code>helm delete --purge mushop-setup
+<pre class="highlight shell tab-shell--helm2"><code>helm delete --purge mushop-utils
+</code></pre><pre class="highlight shell tab-shell--helm3"><code>helm delete mushop-utils -n mushop-utilities
+</code></pre></li>
+<li><p>If you installed Istio service mesh, uninstall it:</p>
+<pre class="highlight shell tab-shell"><code>istioctl manifest generate --set <span class="nv">profile</span><span class="o">=</span>demo | kubectl delete -f -
 </code></pre></li>
 </ul>
-<h1 id='acknowledgements'>Acknowledgements</h1>
+<h1 id='acknowledgements'>Acknowledgements</h1><h2 id='community'>Community</h2>
 <p>This project, and its associative materials utilizes many excellent projects from
 the open source community. While there are numerous, the following projects deserve
 some special recognition:</p>
@@ -860,9 +1511,13 @@ some special recognition:</p>
 <li><a href="https://revealjs.com/">Reveal.js</a>: HTML presentation tool used to develop workshop materials</li>
 <li><a href="https://github.com/chekromul/uikit-ecommerce-template">Roman Chekurov</a>: Inspiration and basis for MuShop UI</li>
 </ul>
+<h2 id='contributors'>Contributors</h2>
+<p>Thanks to all our contributors for their commitment to open source!</p>
+
+<div id="muContributors" class="flex flex-wrap gutters"></div>
 
       </div>
-      <div class="dark-box redwood-bar">
+      <div class="dark-box">
       </div>
       <div class="footer-wrapper">
       </div>
