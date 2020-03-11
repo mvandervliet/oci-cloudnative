@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/mtvander/dev/oci/ateam/cloudnative/oci-cloudnative/docs",
+	"sourceRoot": "/home/runner/work/oci-cloudnative/oci-cloudnative/src/docs",
 	"sources": [
 		"themes/redwood/assets/sass/main.scss",
 		"themes/redwood/assets/sass/uk/_uikit.scss",
