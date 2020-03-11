@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="https://mvandervliet.github.io/oci-cloudnative/sass/main.min.eff84e5f52e9affa5c6c714dd4eb03ff45a792e49db158a817876c1796854b46.css" integrity="sha256-7/hOX1Lpr/pcbHFN1OsD/0WnkuSdsVioF4dsF5aFS0Y=">
+  <link rel="stylesheet" type="text/css" href="https://mvandervliet.github.io/oci-cloudnative/sass/main.min.ee2cfbd619b3da525a68291af01a3094c6830e5fd2f18915b1888c8121e0b772.css" integrity="sha256-7iz71hmz2lJaaCka8BowlMaDDl/S8YkVsYiMgSHgt3I=">
   <link rel="stylesheet" type="text/css" href="https://mvandervliet.github.io/oci-cloudnative/fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="https://mvandervliet.github.io/oci-cloudnative/sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -473,7 +473,7 @@
         <li><a href="#features">Features</a>
           <ul>
             <li><a href="#code-settings">Code Settings</a></li>
-            <li><a href="#shortcodes">Shortcodes</a>
+            <li><a href="#shortcode-components">Shortcode Components</a>
               <ul>
                 <li><a href="#alert">Alert</a></li>
                 <li><a href="#aspect-ratio">Aspect Ratio</a></li>
@@ -482,6 +482,10 @@
                 <li><a href="#switcher">Switcher</a></li>
                 <li><a href="#width">Width</a></li>
                 <li><a href="#wrapper">Wrapper</a></li>
+              </ul>
+            </li>
+            <li><a href="#shortcode-extras">Shortcode Extras</a>
+              <ul>
                 <li><a href="#mermaid">Mermaid</a></li>
               </ul>
             </li>
@@ -593,78 +597,99 @@
   ```
 </code></pre></div></li>
 </ul>
-<h3 id="shortcodes">Shortcodes</h3>
+<h3 id="shortcode-components">Shortcode Components</h3>
 <p>Add panache to the documentation using these custom shortcodes</p>
 <h4 id="alert">Alert</h4>
 <blockquote>
 <p>Displays an alert style block. Specify icon from the UIkit <a href="https://getuikit.com/docs/icon#library">icon library</a></p>
 </blockquote>
 <p><code>alert &lt;style=&quot;(default|primary|success|warning|danger)&quot;&gt; &lt;icon=&quot;&quot;&gt;</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% alert style=&#34;success&#34; icon=&#34;check&#34; %}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% alert style=&#34;success&#34; icon=&#34;check&#34; %}}
 Alert content to <span class="sb">`process`</span> as markdown
 {{% /alert %}}
-</code></pre></div><div uk-alert class="uk-alert-success uk-grid uk-grid-collapse uk-flex-nowrap"><span uk-icon="icon: check; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
-<p>Alert content to <code>process</code> as markdown</p>
+</code></pre></div><div class="" >
+  <div uk-alert class="uk-alert-success uk-grid uk-grid-collapse uk-flex-nowrap"><span uk-icon="icon: check; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
+    <p>Alert content to <code>process</code> as markdown</p>
 </div></div>
+</div>
+  </div>
 <h4 id="aspect-ratio">Aspect Ratio</h4>
 <blockquote>
 <p>Fix the enclosed content to an aspect ratio.</p>
 </blockquote>
 <p><code>aspect &lt;ratio=&quot;(1-1|3-2|4-3|16-9|2-1)&quot;&gt; [class=&quot;...&quot;]</code></p>
-<div class="rw-aspect rw-aspect-2-1 uk-margin-bottom">
-<div class="uk-background-primary uk-light uk-padding-small">
-  <p>Content with aspect ratio of <code>2-1</code></p>
-</div>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% aspect ratio=&#34;2-1&#34; class=&#34;uk-margin-bottom&#34; %}}
-{{% wrapper &#34;uk-background-primary uk-light uk-padding-small&#34; %}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% aspect ratio=&#34;2-1&#34; %}}
+{{% wrapper &#34;uk-background-muted uk-padding-small&#34; %}}
 Content with aspect ratio of <span class="sb">`2-1`</span>
 {{% /wrapper %}}
 {{% /aspect %}}
-</code></pre></div><h4 id="grid">Grid</h4>
+</code></pre></div><div class="" >
+  <div class="rw-aspect rw-aspect-2-1 "><div class="uk-background-muted uk-padding-small" >
+  <p>Content with aspect ratio of <code>2-1</code></p>
+</div>
+</div>
+</div>
+  </div>
+<h4 id="grid">Grid</h4>
 <blockquote>
 <p>Add a grid of inner contents using <a href="https://getuikit.com/docs/grid">grid</a> and <a href="https://getuikit.com/docs/flex">flex</a></p>
 </blockquote>
 <p><code>grid [...]</code></p>
-<p>Supports the following options:</p>
-<ul>
-<li><code>options</code>: See <a href="https://getuikit.com/docs/grid#component-options">docs</a></li>
-<li><code>class</code>: Any classes to add to the grid wrapper</li>
-<li><code>col</code>: Child element column <a href="https://getuikit.com/docs/width">width</a></li>
-<li><code>breakpoint</code>: <code>(s|m|l|xl)</code> breakpoint at which the child element width becomes grid vs stacked. Default <code>m</code></li>
-<li><code>gutter</code>: <code>(small|medium|large|collapse)</code> gutter settings (optional)</li>
-<li><code>x</code>: horizontal flex alignment see <a href="https://getuikit.com/docs/flex#horizontal-alignment">here</a></li>
-<li><code>y</code>: vertical flex alignment see <a href="https://getuikit.com/docs/flex#vertical-alignment">here</a></li>
-</ul>
-
-  <ul uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-3@m  ">
-<li><strong>Example</strong></li>
-<li>Item one</li>
-<li>Item two</li>
-</ul>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-3&#34; %}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-3&#34; %}}
 <span class="k">-</span> **Example**
 <span class="k">-</span> Item one
 <span class="k">-</span> Item two
 {{% /grid %}}
-</code></pre></div><h4 id="icon">Icon</h4>
+</code></pre></div><div class="" >
+    <ul uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-3@m  ">
+<li><strong>Example</strong></li>
+<li>Item one</li>
+<li>Item two</li>
+</ul>
+</div>
+  </div>
+<p>Supports the following options:</p>
+<ul>
+<li><code>gutter</code>: <code>(small|medium|large|collapse)</code> gutter settings (optional)</li>
+<li><code>class</code>: Any classes to add to the grid wrapper</li>
+<li><code>col</code>: Child element column <a href="https://getuikit.com/docs/width">width</a></li>
+<li><code>breakpoint</code>: <code>(s|m|l|xl)</code> breakpoint at which the child element width becomes grid vs stacked. Default <code>m</code></li>
+<li><code>x</code>: horizontal flex alignment see <a href="https://getuikit.com/docs/flex#horizontal-alignment">here</a></li>
+<li><code>y</code>: vertical flex alignment see <a href="https://getuikit.com/docs/flex#vertical-alignment">here</a></li>
+<li><code>options</code>: See <a href="https://getuikit.com/docs/grid#component-options">docs</a></li>
+</ul>
+<h4 id="icon">Icon</h4>
 <blockquote>
 <p>Add any icon from the <a href="https://getuikit.com/docs/icon#library">library</a></p>
 </blockquote>
 <p><code>icon &lt;name&gt; [ratio]</code></p>
-<span uk-icon="icon: bookmark; ratio: 3.5"></span>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">{{&lt; icon &#34;bookmark&#34; &#34;3.5&#34; &gt;}}
-</code></pre></div><h4 id="switcher">Switcher</h4>
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">{{&lt; icon &#34;bookmark&#34; &#34;2.5&#34; &gt;}}
+</code></pre></div><p><span uk-icon="icon: bookmark; ratio: 2.5"></span></p>
+  </div>
+<h4 id="switcher">Switcher</h4>
 <blockquote>
 <p>Create a left-tab switcher component</p>
 </blockquote>
 <p><code>switcher &lt;...tabs&gt;</code></p>
-<div uk-grid class="uk-margin-bottom">
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; switcher &#34;One&#34; &#34;Two&#34; &#34;Three&#34; &gt;}}
+<span class="k">-</span> Tab one content
+    ```ts
+    const foo: string = &#39;blah blah&#39;;
+    ```
+<span class="k">-</span> Tab two content
+<span class="k">-</span> Tab three content
+{{&lt; /switcher &gt;}}
+</code></pre></div><div uk-grid class="uk-margin-bottom">
   <div class="uk-width-auto@m">
-    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-15"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
+    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-281"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
   </div>
   <div class="uk-width-expand@m">
-    <ul id='switcher-15' class='uk-switcher'>
+    <ul id='switcher-281' class='uk-switcher'>
 <li>Tab one content
 <div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">foo</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;blah blah&#39;</span><span class="p">;</span>
 </code></pre></div></li>
@@ -673,59 +698,63 @@ Content with aspect ratio of <span class="sb">`2-1`</span>
 </ul>
   </div>
 </div>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; switcher &#34;One&#34; &#34;Two&#34; &#34;Three&#34; &gt;}}
-<span class="k">-</span> Tab one content
-    ```ts
-    const foo: string = &#39;blah blah&#39;;
-    ```
-<span class="k">-</span> Tab two content
-<span class="k">-</span> Tab three content
-{{&lt; /switcher &gt;}}
-</code></pre></div><h4 id="width">Width</h4>
+  </div>
+<h4 id="width">Width</h4>
 <blockquote>
 <p>Specify inner width after breakpoint according to the <a href="https://getuikit.com/docs/width">docs</a></p>
 </blockquote>
 <p><code>width &lt;width&gt; [breakpoint]</code></p>
-<div class="uk-margin-auto uk-width-1-1 uk-width-1-3@s"><div uk-alert class="uk-alert-danger uk-grid uk-grid-collapse uk-flex-nowrap"><div class="uk-width-expand">
-    <p><img src="../images/oracle.svg" alt="image"></p>
-</div></div>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% width &#34;1-3&#34; &#34;s&#34; %}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% width &#34;1-2&#34; &#34;s&#34; %}}
 {{% alert style=&#34;danger&#34; %}}
 ![<span class="nt">image</span>](<span class="na">../images/oracle.svg</span>)
 {{% /alert %}}
 {{% /width %}}
-</code></pre></div><h4 id="wrapper">Wrapper</h4>
+</code></pre></div><div class="" >
+  <div class="uk-margin-auto uk-width-1-1 uk-width-1-2@s"><div uk-alert class="uk-alert-danger uk-grid uk-grid-collapse uk-flex-nowrap"><div class="uk-width-expand">
+    <p><img src="../images/oracle.svg" alt="image"></p>
+</div></div>
+</div>
+</div>
+  </div>
+<h4 id="wrapper">Wrapper</h4>
 <blockquote>
 <p>Wraps inner content with any <code>div</code> and specified classes. Useful for specifying markup with other UIkit features</p>
 </blockquote>
 <p><code>wrapper [classes]</code></p>
-<div class="uk-width-1-4@s uk-light uk-background-primary uk-panel uk-padding uk-margin-bottom">
-<p>Light Panel</p>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% wrapper &#34;uk-width-1-4@s uk-light uk-background-primary uk-panel uk-padding uk-margin-bottom&#34; %}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% wrapper &#34;uk-light uk-background-primary uk-panel uk-padding&#34; %}}
 Light Panel
 {{% /wrapper %}}
-</code></pre></div><h4 id="mermaid">Mermaid</h4>
+</code></pre></div><div class="" >
+  <div class="uk-light uk-background-primary uk-panel uk-padding" >
+  <p>Light Panel</p>
+</div>
+</div>
+  </div>
+<h3 id="shortcode-extras">Shortcode Extras</h3>
+<h4 id="mermaid">Mermaid</h4>
 <blockquote>
 <p>SVG diagrams from <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></p>
 </blockquote>
 <p><code>mermaid</code></p>
-<div class="mermaid ">
-graph LR
-  A[Hard edge] -->|Link text| B(Round edge)
-  B --> C{Decision}
-  C -->|One| D[Result one]
-  C -->|Two| E[Result two]
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; mermaid &gt;}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; mermaid &gt;}}
 graph LR
   A[Hard edge] --&gt;|Link text| B(Round edge)
   B --&gt; C{Decision}
   C --&gt;|One| D[Result one]
   C --&gt;|Two| E[Result two]
 {{&lt; /mermaid &gt;}}
-</code></pre></div>
+</code></pre></div><div class="mermaid ">
+graph LR
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C -->|One| D[Result one]
+  C -->|Two| E[Result two]
+</div>
+  </div>
+
 
             </main>
           </div> 
