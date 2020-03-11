@@ -480,6 +480,7 @@
                 <li><a href="#card">Card</a></li>
                 <li><a href="#grid">Grid</a></li>
                 <li><a href="#icon">Icon</a></li>
+                <li><a href="#overflow">Overflow</a></li>
                 <li><a href="#switcher">Switcher</a></li>
                 <li><a href="#width">Width</a></li>
                 <li><a href="#wrapper">Wrapper</a></li>
@@ -687,8 +688,8 @@ Content with aspect ratio of <span class="sb">`2-1`</span>
 <p>Display content as cards - usually in a grid</p>
 </blockquote>
 <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
-    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-2&#34; y=&#34;top&#34; %}}
-{{% card style=&#34;primary&#34; title=&#34;Primary&#34; %}}
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-2&#34; %}}
+{{% card style=&#34;primary&#34; title=&#34;Primary&#34; hover=true %}}
 Card body
 {{% /card %}}
 {{% card style=&#34;secondary&#34; title=&#34;Secondary&#34; %}}
@@ -696,9 +697,9 @@ Card body
 {{% /card %}}
 {{% /grid %}}
 </code></pre></div><div class="" >
-  <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+  <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  ">
     <div class="">
-  <div class="uk-card uk-card-body  uk-card-primary uk-card- ">
+  <div class="uk-card uk-card-body uk-card-hover uk-card-primary uk-card- ">
     <h3 class="uk-card-title">Primary</h3>
     <p>Card body</p>
   </div>
@@ -831,6 +832,37 @@ Card body
 </tbody>
 </table>
 <hr>
+<h4 id="overflow">Overflow</h4>
+<blockquote>
+<p>Applies automatic overflow to the contents. Useful with <a href="#aspect-ratio">aspect ratio</a> and <code>table</code> contents</p>
+</blockquote>
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% overflow %}}
+Something very tall or wide
+{{% /overflow %}}
+</code></pre></div><div class="uk-overflow-auto " >
+  <p>Something very wide</p>
+</div>
+  </div>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[class]</code></td>
+<td>CSS class string to apply to wrapper <code>&lt;div&gt;</code> element</td>
+</tr>
+<tr>
+<td><code>[attr]</code></td>
+<td>Attributes to apply to wrapper <code>&lt;div&gt;</code> element</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h4 id="switcher">Switcher</h4>
 <blockquote>
 <p>Create a left-tab switcher component</p>
@@ -846,10 +878,10 @@ Card body
 {{&lt; /switcher &gt;}}
 </code></pre></div><div uk-grid class="uk-margin-bottom">
   <div class="uk-width-auto@m">
-    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-36"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
+    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-300"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
   </div>
   <div class="uk-width-expand@m">
-    <ul id='switcher-36' class='uk-switcher'>
+    <ul id='switcher-300' class='uk-switcher'>
 <li>Tab one content
 <div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">foo</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;blah blah&#39;</span><span class="p">;</span>
 </code></pre></div></li>
@@ -895,7 +927,7 @@ Card body
 <table>
 <thead>
 <tr>
-<th>Argument</th>
+<th>Arguments</th>
 <th></th>
 </tr>
 </thead>
@@ -915,7 +947,6 @@ Card body
 <blockquote>
 <p>Wraps inner content with any <code>div</code> and specified classes. Useful for specifying markup with other UIkit features</p>
 </blockquote>
-<p><code>wrapper [classes]</code></p>
 <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
     <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% wrapper &#34;uk-light uk-background-primary uk-panel uk-padding&#34; %}}
 Light Panel
@@ -929,7 +960,7 @@ Light Panel
 <table>
 <thead>
 <tr>
-<th>Argument</th>
+<th>Arguments</th>
 <th></th>
 </tr>
 </thead>
@@ -937,6 +968,10 @@ Light Panel
 <tr>
 <td><code>[class]</code></td>
 <td>CSS class string to apply to wrapper <code>&lt;div&gt;</code> element</td>
+</tr>
+<tr>
+<td><code>[attr]</code></td>
+<td>Attributes to apply to wrapper <code>&lt;div&gt;</code> element</td>
 </tr>
 </tbody>
 </table>
@@ -947,14 +982,14 @@ Light Panel
 <p>SVG diagrams from <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></p>
 </blockquote>
 <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top">
-    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; mermaid &gt;}}
+    <div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{&lt; mermaid class=&#34;uk-text-center&#34; &gt;}}
 graph TD
   A[Hard edge] --&gt;|Link text| B(Round edge)
   B --&gt; C{Decision}
   C --&gt;|One| D[Result one]
   C --&gt;|Two| E[Result two]
 {{&lt; /mermaid &gt;}}
-</code></pre></div><div class="mermaid ">
+</code></pre></div><div class="mermaid uk-text-center">
 graph TD
   A[Hard edge] -->|Link text| B(Round edge)
   B --> C{Decision}
@@ -962,6 +997,21 @@ graph TD
   C -->|Two| E[Result two]
 </div>
   </div>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td>Additional classes</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 
             </main>
