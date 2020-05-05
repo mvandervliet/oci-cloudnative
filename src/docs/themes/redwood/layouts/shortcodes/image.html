@@ -1,0 +1,5 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" -}}
+<a href="{{ $src }}" {{ with .Get "title" }}data-caption="{{ . }}"{{ end }}>
+  <img uk-img data-src="{{ $src }}" />
+</a>
