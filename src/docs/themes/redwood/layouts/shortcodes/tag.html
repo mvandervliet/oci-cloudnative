@@ -1,0 +1,7 @@
+{{- $label := .Get "label" -}}
+{{- $icon := .Get "icon" | default "tag" -}}
+{{- $href := .Get "href" | default "#" -}}
+<a class="uk-label uk-label-{{ .Get "style" | default "default" }}" href="{{ $href | urlize }}">
+  <span uk-icon="{{ $icon }}"></span>
+  {{ $label }}
+</a>
