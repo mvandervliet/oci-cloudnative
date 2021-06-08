@@ -2,34 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extras on MuShop</title>
-    <link>https://mvandervliet.github.io/oci-cloudnative/extras/</link>
+    <link>/extras/</link>
     <description>Recent content in Extras on MuShop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2020 16:04:15 -0600</lastBuildDate>
-    
-	<atom:link href="https://mvandervliet.github.io/oci-cloudnative/extras/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 09 Mar 2020 16:04:15 -0600</lastBuildDate><atom:link href="/extras/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Monitoring</title>
-      <link>https://mvandervliet.github.io/oci-cloudnative/extras/monitoring/</link>
-      <pubDate>Mon, 09 Mar 2020 16:05:08 -0600</pubDate>
+      <title>Jenkins</title>
+      <link>/extras/jenkins/</link>
+      <pubDate>Wed, 24 Jun 2020 16:48:49 -0700</pubDate>
       
-      <guid>https://mvandervliet.github.io/oci-cloudnative/extras/monitoring/</guid>
-      <description>Prometheus and Grafana Prometheus and Grafana are installed part of the setup umbrella helm chart. Revisit the application charts and connect to some Grafana dashboards:
-  List helm releases:
-helm list --all-namespaces NAME NAMESPACE REVISION UPDATED STATUS CHART APP VERSION mushop mushop 1 2020-01-31 21:14:48.511917 -0600 CST deployed mushop-0.1.0 1.0 mushop-utils mushop-utilities 1 2020-01-31 20:32:05.864769 -0600 CST deployed mushop-setup-0.0.1 1.0   Get the Grafana outputs from the mushop-utils (setup chart) installation:</description>
-    </item>
-    
-    <item>
-      <title>Istio Service Mesh</title>
-      <link>https://mvandervliet.github.io/oci-cloudnative/extras/istio/</link>
-      <pubDate>Tue, 10 Mar 2020 13:29:23 -0600</pubDate>
-      
-      <guid>https://mvandervliet.github.io/oci-cloudnative/extras/istio/</guid>
-      <description>Note that this is OPTIONAL. If you don&amp;rsquo;t want to install Istio service mesh, skip to the deployment section. Additionally, you don&amp;rsquo;t need to install Grafana, Prometheus or the Ingress controller from the setup chart as they are already included in the Istio installation.
- In this section you can install and configure Istio service mesh. The mesh needs to be installed before you deploy Mushop for the service mesh proxies to get injected next to each Mushop service.</description>
+      <guid>/extras/jenkins/</guid>
+      <description>Introduction In this section we will demonstrate how to run leverage your kubernetes cluster for CI/CD tasks using Jenkins.
+Note that Jenkins is OPTIONAL and disabled by default. To enable it, see setup section.
+ When enabled, a Jenkins server is installed on the kubernetes cluster and is setup to utilize the Jenkins Kubernetes plugin. The plugin enables Jenkins to create worker nodes on demand as pods on the kubernetes cluster to run jobs, then terminates the pods when the job is completed.</description>
     </item>
     
   </channel>
